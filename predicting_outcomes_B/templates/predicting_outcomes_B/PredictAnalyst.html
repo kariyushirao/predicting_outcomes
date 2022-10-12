@@ -1,0 +1,33 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    <h4>What's Next: Round {{ subsession.round_number }}/{{ Constants.num_rounds }}</h4>
+{% endblock %}
+
+{% block content %}
+
+    <br><p>
+        <big><strong>Here is a new stock analyst.</strong></big><br><br>
+        You are now watching changes in the value of this analyst's book over the course of
+        8 quarters.  <b>Wait until you have seen the results of all eight quarters</b>, then make your 
+        prediction about what will happen to the value of this analyst's book next quarter. 
+    </p>
+
+    <div>
+        <img style="height:275px" img src="{% static image_path %}"/>
+    </div>
+
+    <br>
+    <p><big>What will happen to the value of this analyst's book next quarter?
+        Will it go <strong>UP</strong> or <strong>DOWN</strong>?</big>
+    </p>
+        {% formfield player.prediction_as with label="" %} 
+
+    <br>
+
+    <div style="text-align:center;">
+        <button class="otree-btn-next btn btn-primary next-button otree-next-button">Next</button>
+    </div>
+
+{% endblock %}

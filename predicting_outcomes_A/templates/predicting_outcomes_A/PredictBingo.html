@@ -1,0 +1,93 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block scripts %}
+<style>
+	.myclass::-webkit-slider-thumb {
+		box-shadow: 2px 2px 2px #000000, 2px 2px 2px #0d0d0d;
+		border: 4px solid #000000;
+		height: 35px !important;
+		width: 20px !important;
+		border-radius: 5px !important;
+		background: dimgrey !important;
+		cursor: pointer !important !important;
+		-webkit-appearance: none !important;
+		margin-top: -14px !important;
+	}
+
+	input[type=range] {
+		-webkit-appearance: none;
+		margin: 18px 0;
+		width: 100%;
+	}
+
+	input[type=range]:focus {
+		outline: none;
+	}
+
+	input[type=range]::-webkit-slider-runnable-track {
+		width: 100%;
+		height: 8.4px;
+		cursor: pointer;
+		animate: 0.2s;
+		box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+		background: #ffffff;
+		border-radius: 1.3px;
+		border: 0.2px solid #010101;
+	}
+
+	input[type=range]::-webkit-slider-thumb {
+		border: 0px;
+		height: 0px;
+		width: 0px;
+		border-radius: 0px;
+		-webkit-appearance: none;
+	}
+
+</style>
+<script>
+
+	$(document).ready(function () {
+		$('input[type=range]').on('input change', function () {
+			$('input[type=range]').addClass('myclass');
+		});
+
+	});
+</script>
+
+{% endblock %}
+
+{% block title %}
+	<h4>What's Next: Round {{ subsession.round_number }}/{{ Constants.num_rounds }}</h4>
+{% endblock %}
+
+{% block content %}
+
+	<br><p>
+		<big><strong>Here is a new round of draws by the mechanical bingo machine.</strong></big><br><br>
+		You are now watching 8 draws by the mechanical bingo machine from a <b>covered</b> cage that contains
+		a <b>mix of blue and red</b> balls.  <b>Wait until you have seen the result of all eight draws</b>, then use 
+		the sliding scale to make your prediction about the color of the next (9th) ball drawn from the cage. 
+	</p>
+
+	<div>
+		<img style="height:275px" img src="{% static image_path %}"/>
+	</div>
+
+	<br>
+	<p style="text-align: center"><big>What is the probability that the next ball drawn from the cage will be <strong>RED?</strong></big>
+	<br>(Click on the slider bar to make the selector button appear.)</p>
+	
+	<div style="float:center; width: 550px; margin: 0 auto; padding: 5px">
+		<p style="float:left"><big><strong>0%&emsp;&emsp;</strong></big></p>
+		<p style="float:right"><big><strong>100%</strong></big></p>
+			{% formfield player.prediction with label="" %}
+	</div>	
+
+	<br>
+
+    <div style="text-align:center;">
+        <button class="otree-btn-next btn btn-primary next-button otree-next-button">Next</button>
+    </div>
+
+{% endblock %} 

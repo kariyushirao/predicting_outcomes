@@ -1,0 +1,34 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+	<h4>What's Next: Round {{ subsession.round_number }}/{{ Constants.num_rounds }}</h4>
+{% endblock %}
+
+{% block content %}
+
+	<br><p>
+		<big><strong>Here is a new round of draws by the mechanical bingo machine.</strong></big><br><br>
+		You are now watching 8 draws by the mechanical bingo machine from a <b>covered</b> cage that contains
+		a <b>mix of blue and red</b> balls.  <b>Wait until you have seen the result of 
+		all eight draws</b>, then make your prediction about the color of 
+		the next (9th) ball drawn from the cage. 
+	</p>
+
+	<div>
+		<img style="height:275px" img src="{% static image_path %}"/>
+	</div>
+
+	<br>
+	<p><big>What color bingo ball will the machine draw next?
+        Will it be <strong>RED</strong> or <strong>BLUE</strong>?</big>
+    </p>
+        {% formfield player.prediction_b with label="" %}	
+
+	<br>
+
+    <div style="text-align:center;">
+        <button class="otree-btn-next btn btn-primary next-button otree-next-button">Next</button>
+    </div>
+
+{% endblock %} 

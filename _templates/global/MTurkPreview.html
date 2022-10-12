@@ -1,0 +1,25 @@
+{% extends "otree/MTurkPreview.html" %}
+{% load otree %}
+
+{% block title %}Please read this before clicking "Accept"{% endblock %}
+
+{% block content %}
+    <p>
+        This HIT is an academic experiment. We are investigating the way people make predictions about
+        what will happen next after watching a sequence of outcomes.
+    </p>
+
+    <p>
+        You will be asked to make a few predictions, and then you will answer a handful of general 
+        knowledge questions and a few questions about yourself and your experience.  The total time 
+        required to make the predictions and answer the brief questions is less than 20 minutes (usually 
+        around 12 minutes).  It is important to complete this entire experiment in one sitting, without 
+        distractions.  Please refrain from visiting other browser windows or tabs while working on this 
+        HIT.  Please also minimize distractions, including outside conversations, videos, or music.
+    </p>
+
+    <p>
+        After completing this HIT, you will receive a payment of $2.50. 
+    </p>
+
+{% endblock %}

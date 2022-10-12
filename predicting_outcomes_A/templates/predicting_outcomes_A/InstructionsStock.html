@@ -1,0 +1,50 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block content %}
+
+	<div class="instructions well well-lg">
+
+	<h4 class="panel-sub-heading">
+		What's Next: Predicting Stock Prices
+	</h4>
+
+	<p>
+		<i>
+			Please read these instructions carefully.  On the next page, you will be required to answer a few
+			questions about these instructions before you can move on to the task. 
+		</i>
+	</p>
+
+	<p>
+		Stock prices change constantly.  <b>Price movement of a stock reflects the market’s evaluation, 
+		and buyers’ and sellers’ expectations of a company’s worth</b>.  Many factors influence stock prices, 
+		such as earnings reports, news about a company’s leadership and products, economic policies, 
+		and political events.  
+	</p>
+	<p>
+		In this task, you will observe <b>changes in different companies’ stock prices</b>.  
+		We will reveal to you, one at a time, the <b><u>change in the value</u> of each company’s stock price over 
+		the course of eight quarters</b> (2 years).  If the market evaluates a company’s worth as higher 
+		than it was worth the previous quarter, then you will see that company’s stock price go up.  
+		If the market evaluates a company’s worth as lower than it was worth the previous quarter, 
+		you will see that company’s stock price go down.  <b><u>After watching what happens</u> to each company's 
+		stock price</b> over the course of eight quarters, <b><u>your job is to predict what will happen to the company’s 
+		stock price in the ninth (next) quarter</u></b>: Do you predict it will go up or down?  After each prediction, 
+		we will move on and show you the results for a new, different company.  This process will repeat 18 times, so you'll 
+		see 18 different companies’ stock price histories in total.  <b><u>Remember that each round</u></b> 
+		you will see the changes in one company’s stock price over 8 quarters, and you will make a prediction 
+		about how that company’s stock price will change in the 9th (next) quarter.
+	</p>
+
+	<p>
+		Once you've completed all 18 rounds, there will be 5 very brief general knowledge questions, and a few questions 
+		about yourself, and that will wrap up the HIT. 
+	</p>
+
+	</div>
+
+
+	{% next_button %}
+
+{% endblock %}

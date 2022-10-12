@@ -1,0 +1,22 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block content %}
+	<p><b><big>Comprehension Check</big></b></p>
+
+	How many outcomes will you see in each sequence?
+    {% formfield player.comprehension1 with label=""%}
+
+    After you see all the outcomes, what are you supposed to do?
+    {% formfield player.comprehension2 with label=""%}
+
+    Which statement best describes what you will see each round?
+    {% formfield player.comprehension3a with label=""%}
+
+    Which statement best describes the outcomes in each sequence?
+    {% formfield player.comprehension4a with label=""%}
+
+
+    {% next_button %}
+
+{% endblock %}

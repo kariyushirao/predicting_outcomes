@@ -1,0 +1,61 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block content %}
+	<p><b><big>Comprehension Check</big></b></p>
+    (Instructions are provided again at the bottom of this page for your reference.)
+    <br><br>
+    
+	How many outcomes will you see in each sequence?
+    {% formfield player.comprehension1 with label=""%}
+
+    After you see all the outcomes, what are you supposed to do?
+    {% formfield player.comprehension2 with label=""%}
+
+    Which statement best describes what you will see each round?
+    {% formfield player.comprehension3b with label=""%}
+
+    Which statement best describes the outcomes in each sequence?
+    {% formfield player.comprehension4b with label=""%}
+
+    After the announcer calls out the color of a ball, what does the machine do?
+    {% formfield player.comprehension5b with label=""%}
+
+    {% next_button %}
+
+    <div class="instructions well well-lg">
+
+    <h4 class="panel-sub-heading">
+        What's Next: Predicting Draws from a Bingo Cage
+    </h4>
+
+    <p>
+        In this task you will watch a mechanical bingo machine draw red and blue balls from its <b>covered</b> cage.  
+        The cage contains <b>a mix of <u>red</u> and <u>blue</u> balls</b>.  Since the cage is covered, <b> no one
+        knows exactly how many red balls or how many blue balls are in the cage</b>.  At the start of every round, 
+        the machine spins the cage, mixing up all of the balls, and then rolls one ball out of the cage so that an 
+        announcer sitting next to the cage can see the color of the ball.  The announcer calls out the color of the ball 
+        (“red” or “blue”), and the machine rolls the ball back into its covered cage.  The machine then spins the cage 
+        again, and rolls another ball out.  The announcer calls out the color of the ball, and the machine rolls 
+        that ball back into its cage.  The machine continues <b><u>randomly drawing colored balls </u>from the 
+        cage until 9 balls have been drawn</b>.  After the 9th ball has been drawn, the round ends, and there is a pause.
+    </p>
+    <p>
+          
+        Each round, we will reveal to you, one at a time, the colors of the first 8 balls drawn by the machine.
+        <b><u>After watching the outcomes</u></b> of these eight draws, <b><u>your job is to predict the color of the next 
+        (9th) ball drawn by the machine </u></b>.  After you make your prediction about the 9th ball, you will 
+        move on to the next round, where you will watch the machine draw another 8 balls and you will again predict 
+        the color of the 9th ball.  This process will repeat 18 times, so you will watch 18 different rounds of 
+        bingo ball draws. <b><u>Remember that each round</u></b> you will see the color of the balls from the first 
+        8 draws, and you will make a prediction about the color of the 9th ball drawn.
+    </p>
+
+    <p>
+        Once you've completed all 18 rounds, there will be 5 very brief general knowledge questions, and a few questions 
+        about yourself, and that will wrap up the HIT. 
+    </p>
+
+    </div>
+
+{% endblock %}
