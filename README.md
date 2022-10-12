@@ -12,7 +12,7 @@ https://osf.io/2d93t/?view_only=f11ee708bfc4416a9da4e8a5ef71ad31
 
 This application was built on oTree version 2.1.41.  This code is not compatible with later versions of oTree, and will not run if you have a more modern version of oTree on your machine.  
 
-Note that the README_otree.md file contained in this repository maps to oTree version 2.1.41, so the information in that file is outdated (including links and sample code).  Visit the oTree Docs (linked below) to learn more about the oTree platform, and to fine information about the oTree version history.
+Note that the README_otree.md file contained in this repository maps to oTree version 2.1.41, so the information in that file is outdated (including links and sample code).  Visit the oTree Docs (linked below) to learn more about the oTree platform, and to find information about the oTree version history.
 
 ### Link to oTree Documentation
 
