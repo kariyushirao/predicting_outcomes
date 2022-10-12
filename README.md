@@ -2,7 +2,7 @@
 
 This repository contains simplified oTree code for Studies 1A and 1B in Rao, K., & Hastie, R. (2020). Predicting Outcomes in a Sequence of Binary Events: Belief Updating and Gambler’s Fallacy Reasoning. Available at SSRN 3597264.
 
-The only difference between Study 1A, 2A, and 3B is the experimental instructions provided to participants.  The same is true between Studies 1B, 2B, and 3B.  Aside from the experimental instructions, the basic functionality of all six experiments in this research program are represented by the application contained in this repository.
+The only differences between Study 1A, 2A, and 3A are in the experimental instructions provided to participants.  The same is true between Studies 1B, 2B, and 3B.  Aside from the experimental instructions, the basic functionality of all six experiments in this research program are represented by the application contained in this repository.
 
 ### Link to OSF Page for This Project
 
